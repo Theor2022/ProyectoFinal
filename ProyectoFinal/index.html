@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ProjectoJS</title>
+	<link rel="stylesheet" href="styles.css"/>
+</head>
+<nav class="navbar navbar-dark bg-dark">
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent"
+		aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+</nav>
+<body>
+
+	<!-- MI PROYECTO -->
+	<div class="container">
+		
+		<h1 class="titulo">ZONA GAMER</h1>
+		
+		<hr>
+	
+		<div class="row" id="cards"></div>
+	</div>
+
+	<template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td></td> 
+        <td>
+            <button class="btn btn-vaciar btn-sm" id="vaciar-carrito">vaciar todo</button>
+        </td>
+        <td class="font-weight-bold">$ <span>5000</span></td>
+    </template>
+    
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>juegos</td>
+        <td>1</td>
+        <td>
+            <button class="btn btn-info btn-sm"> + </button>
+            <button class="btn btn-danger btn-sm"> - </button>
+        </td>
+        <td>$ <span>500</span></td> 
+      </tr>
+    </template>
+
+
+	<template id="template-card">
+		<div class="col-12 mb-2 col-md-4">
+		  <div class="card">
+			  <img src="" alt="" class="card-img-top">
+			<div class="card-body">
+			  <h3>nombre</h3>
+			  <h4>categoria</h4>
+			  <p>precio</p>
+			  <button class="btn btn-dark">Comprar</button>
+			</div>
+		  </div>
+		</div>
+	  </template>
+
+	  <table class="table">
+		<thead>
+		  <tr>
+			<th scope="col">Producto</th>
+			<th scope="col">Nombre</th>
+			<th scope="col">Cantidad</th>
+			<th scope="col">Acción</th>
+			<th scope="col">Total</th>
+		  </tr>
+		</thead>
+		<tbody id="items"></tbody>
+		<tfoot>
+		  <tr id="footer">
+			<th scope="row" colspan="5">Carrito vacío</th>
+		  </tr>
+		</tfoot>
+	  </table>
+	  	<!-- AGREGADO -->
+		<!-- Button trigger modal -->
+	<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+		<button type="button" class="btn btn-primary botonComprar" data-bs-toggle="modal" data-bs-target="#exampleModal">
+			COMPRAR
+  		</button>
+	</div>
+
+	
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog modal-dialog-centered">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h5 class="modal-title" id="exampleModalLabel">GRACIAS POR SU COMPRA</h5>
+		  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+		</div>
+		<br>
+		<div class="modal-body">
+		  Su envio será enviado a domicilio.<br>
+		  Gracias
+		</div>
+		<br>
+		<div class="modal-footer">
+		  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Salir</button>
+		 
+		  <!-- <button type="button" class="btn btn-primary"></button> -->
+		</div>
+	  </div>
+	</div>
+  </div>
+
+		<!-- AGREGADO -->
+	<!--FIN PROYECTO -->
+
+<script src="app.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
